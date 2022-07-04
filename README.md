@@ -7,16 +7,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
-http://127.0.0.1:8000/api/valordohotel/100/moeda/dolar/margem/20
+## como usar
+/api/valordohotel/100/moeda/dolar/margem/20
 fazer as requisições
 
-http://127.0.0.1:8000/api/addmoeda
+/api/addmoeda
 addicionar uma nova moeda
 
 
-http://127.0.0.1:8000/api/update/1
+/api/update/1
 deletar uma nova moeda
 
 editar uma moeda existente
-http://127.0.0.1:8000/api/update/1
+/api/update/1
