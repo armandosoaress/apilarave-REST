@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTestamentosTable extends Migration
+class CreateMoedasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateTestamentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('testamentos', function (Blueprint $table) {
+        Schema::create('moedas', function (Blueprint $table) {
             $table->id();
             $table->string('nome')->unique();
+            $table->float('valor');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateTestamentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('testamentos');
+        Schema::dropIfExists('moedas');
     }
 }

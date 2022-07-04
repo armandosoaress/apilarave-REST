@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Testamentocontroller;
+use App\Http\Controllers\Moedacontroller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,14 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 route::get('/teste',function(){
-    return "teste com sucess";
+    return "teste com sucesso";
 });
 
-route::post('/testamento', [Testamentocontroller::class,'store']);
-route::put('/testamento/{id}', [Testamentocontroller::class,'update']);
-route::get('/testamento', [Testamentocontroller::class,'index']);
-route::get('/testamento/{id}', [Testamentocontroller::class,'show']);
-route::delete('/testamento/{id}', [Testamentocontroller::class,'destroy']);
+route::post('/addmoeda', [Moedacontroller::class,'store']);
+route::get('/moedas', [Moedacontroller::class,'index']);
+route::get('/valordohotel/{valor}/moeda/{moeda}/margem/{margem}', [Moedacontroller::class,'calculo']);
+route::get('/moeda/{id}', [Moedacontroller::class,'show']);
+route::put('/update/{id}', [Moedacontroller::class,'update']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
